@@ -1,7 +1,3 @@
-## ParkIt
-
-Visitors can post about their park experiences.
-
 ## Objectives
 
 1. Build a small Rails project
