@@ -1,4 +1,3 @@
 <h1><%= @experience.title %></h1>
 
-<%= (link_to @experience.visitor.name, visitor_path(@experience.visitor)) if @experience.visitor %> 
-<%= (link_to @experience.park.name, park_path(@experience.park)) if @experience.park %>
+<h3><%= @experience.description %></h3>

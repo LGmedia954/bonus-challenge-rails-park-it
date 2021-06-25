@@ -1,3 +1,3 @@
 class Park < ActiveRecord::Base
-	has many :visitors
+	has_many :visitors
 end
