@@ -1,0 +1,11 @@
+<h3>Park Form</h3>
+
+<%= form_for(@park) do |f| %>
+  <label>Park name:</label><br>
+  <%= f.text_field :name %><br>
+
+  <label>Park city:</label><br>
+  <%= f.text_field :city %><br>
+
+  <%= f.submit %>
+<% end %>

@@ -1,0 +1,17 @@
+<h3>Experience Form</h3>
+
+<%= form_for(@experience) do |f| %>
+  <label>Experience title:</label><br>
+  <%= f.text_field :title %><br>
+
+  <label>Experience description:</label><br>
+  <%= f.text_field :description %><br>
+
+  <label>Visitor id:</label><br>
+  <%= f.text_field :visitor_id %><br>
+
+  <label>Park id:</label><br>
+  <%= f.text_field :park_id %><br>
+
+  <%= f.submit %>
+<% end %>
