@@ -1,3 +1,7 @@
+## Park It
+
+Visitors can share feedback about their park experiences.
+
 ## Objectives
 
 1. Build a small Rails project
