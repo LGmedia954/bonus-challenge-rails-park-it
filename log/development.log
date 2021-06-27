@@ -2064,3 +2064,204 @@ rack (2.2.3) lib/rack/handler/webrick.rb:95:in `service'
   Rendering /Users/lesliegonzalez/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
   Rendered /Users/lesliegonzalez/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
   Rendered /Users/lesliegonzalez/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (36.0ms)
+DEPRECATION WARNING: You didn't set `secret_key_base`. Read the upgrade documentation to learn more about this new config option. (called from env_config at /Users/lesliegonzalez/.rvm/gems/ruby-2.6.1/gems/railties-5.0.7.2/lib/rails/application.rb:246)
+DEPRECATION WARNING: You didn't set `secret_key_base`. Read the upgrade documentation to learn more about this new config option. (called from env_config at /Users/lesliegonzalez/.rvm/gems/ruby-2.6.1/gems/railties-5.0.7.2/lib/rails/application.rb:246)
+Started GET "/" for ::1 at 2021-06-27 13:29:03 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Parameters: {"internal"=>true}
+  Rendering /Users/lesliegonzalez/.rvm/gems/ruby-2.6.1/gems/railties-5.0.7.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/lesliegonzalez/.rvm/gems/ruby-2.6.1/gems/railties-5.0.7.2/lib/rails/templates/rails/welcome/index.html.erb (3.2ms)
+Completed 200 OK in 18ms (Views: 8.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-06-27 13:29:07 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Parameters: {"internal"=>true}
+  Rendering /Users/lesliegonzalez/.rvm/gems/ruby-2.6.1/gems/railties-5.0.7.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/lesliegonzalez/.rvm/gems/ruby-2.6.1/gems/railties-5.0.7.2/lib/rails/templates/rails/welcome/index.html.erb (1.6ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/parks" for ::1 at 2021-06-27 13:30:37 -0400
+Processing by ParksController#index as HTML
+  Rendering parks/index.html.erb
+  [1m[36mPark Load (0.3ms)[0m  [1m[34mSELECT "parks".* FROM "parks"[0m
+  Rendered parks/index.html.erb (21.0ms)
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `title' for #<Park id: 1, name: "Central Park", city: "Manhattan">):
+    1: <% @parks.each do |park| %>
+    2: 	<p><%= park.id %></p>. <p><%= park.title %></p>
+    3: <% end %>
+  
+app/views/parks/index.html.erb:2:in `block in _app_views_parks_index_html_erb___1303290177668562448_70313241912220'
+app/views/parks/index.html.erb:1:in `_app_views_parks_index_html_erb___1303290177668562448_70313241912220'
+  Rendering /Users/lesliegonzalez/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/lesliegonzalez/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/lesliegonzalez/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.8ms)
+  Rendering /Users/lesliegonzalez/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/lesliegonzalez/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendering /Users/lesliegonzalez/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/lesliegonzalez/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/lesliegonzalez/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (25.0ms)
+Started GET "/parks" for ::1 at 2021-06-27 13:31:06 -0400
+Processing by ParksController#index as HTML
+  Rendering parks/index.html.erb
+  [1m[36mPark Load (0.2ms)[0m  [1m[34mSELECT "parks".* FROM "parks"[0m
+  Rendered parks/index.html.erb (1.4ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/parks" for ::1 at 2021-06-27 13:31:22 -0400
+Processing by ParksController#index as HTML
+  Rendering parks/index.html.erb
+  [1m[36mPark Load (0.1ms)[0m  [1m[34mSELECT "parks".* FROM "parks"[0m
+  Rendered parks/index.html.erb (1.3ms)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/parks" for ::1 at 2021-06-27 13:33:26 -0400
+Processing by ParksController#index as HTML
+  Rendering parks/index.html.erb
+  [1m[36mPark Load (0.2ms)[0m  [1m[34mSELECT "parks".* FROM "parks"[0m
+  Rendered parks/index.html.erb (1.5ms)
+Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2021-06-27 13:33:26 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Parameters: {"internal"=>true}
+  Rendering /Users/lesliegonzalez/.rvm/gems/ruby-2.6.1/gems/railties-5.0.7.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/lesliegonzalez/.rvm/gems/ruby-2.6.1/gems/railties-5.0.7.2/lib/rails/templates/rails/welcome/index.html.erb (2.0ms)
+Completed 200 OK in 5ms (Views: 3.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/experiences" for ::1 at 2021-06-27 13:33:29 -0400
+Processing by ExperiencesController#index as HTML
+  Rendering experiences/index.html.erb
+  [1m[36mExperience Load (0.5ms)[0m  [1m[34mSELECT "experiences".* FROM "experiences"[0m
+  Rendered experiences/index.html.erb (7.8ms)
+Completed 200 OK in 17ms (Views: 8.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/experiences" for ::1 at 2021-06-27 13:34:25 -0400
+Processing by ExperiencesController#index as HTML
+  Rendering experiences/index.html.erb
+  [1m[36mExperience Load (0.1ms)[0m  [1m[34mSELECT "experiences".* FROM "experiences"[0m
+  Rendered experiences/index.html.erb (0.9ms)
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/experiences" for ::1 at 2021-06-27 13:34:58 -0400
+Processing by ExperiencesController#index as HTML
+  Rendering experiences/index.html.erb
+  [1m[36mExperience Load (0.2ms)[0m  [1m[34mSELECT "experiences".* FROM "experiences"[0m
+  Rendered experiences/index.html.erb (9.8ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `first_name' for nil:NilClass):
+    1: <% @experiences.each do |experience| %>
+    2: 	<p><%= experience.title %></p>
+    3:     <p><%= experience.visitor.first_name %></p>
+    4:     <p><%= experience.updated_at %></p>
+    5:     <br><br>
+    6: <% end %>
+  
+app/views/experiences/index.html.erb:3:in `block in _app_views_experiences_index_html_erb__2810765109743541498_70313206962360'
+app/views/experiences/index.html.erb:1:in `_app_views_experiences_index_html_erb__2810765109743541498_70313206962360'
+  Rendering /Users/lesliegonzalez/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/lesliegonzalez/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/lesliegonzalez/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.2ms)
+  Rendering /Users/lesliegonzalez/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/lesliegonzalez/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /Users/lesliegonzalez/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/lesliegonzalez/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.5ms)
+  Rendered /Users/lesliegonzalez/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (18.5ms)
+Started GET "/experiences" for ::1 at 2021-06-27 13:36:42 -0400
+Processing by ExperiencesController#index as HTML
+  Rendering experiences/index.html.erb
+  [1m[36mExperience Load (0.1ms)[0m  [1m[34mSELECT "experiences".* FROM "experiences"[0m
+  Rendered experiences/index.html.erb (2.3ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `first_name' for nil:NilClass):
+    1: <% @experiences.each do |experience| %>
+    2: 	<p><%= experience.title %></p>
+    3:     <p><%= experience.visitor_id.first_name %></p>
+    4:     <p><%= experience.updated_at %></>
+    5:     <br><br>
+    6: <% end %>
+  
+app/views/experiences/index.html.erb:3:in `block in _app_views_experiences_index_html_erb__2810765109743541498_70313208557380'
+app/views/experiences/index.html.erb:1:in `_app_views_experiences_index_html_erb__2810765109743541498_70313208557380'
+  Rendering /Users/lesliegonzalez/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/lesliegonzalez/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/lesliegonzalez/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.6ms)
+  Rendering /Users/lesliegonzalez/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/lesliegonzalez/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendering /Users/lesliegonzalez/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/lesliegonzalez/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.7ms)
+  Rendered /Users/lesliegonzalez/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (23.3ms)
+Started GET "/experiences" for ::1 at 2021-06-27 13:36:59 -0400
+Processing by ExperiencesController#index as HTML
+  Rendering experiences/index.html.erb
+  [1m[36mExperience Load (0.1ms)[0m  [1m[34mSELECT "experiences".* FROM "experiences"[0m
+  Rendered experiences/index.html.erb (0.8ms)
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/experiences" for ::1 at 2021-06-27 13:37:15 -0400
+Processing by ExperiencesController#index as HTML
+  Rendering experiences/index.html.erb
+  [1m[36mExperience Load (0.2ms)[0m  [1m[34mSELECT "experiences".* FROM "experiences"[0m
+  Rendered experiences/index.html.erb (1.1ms)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/experiences" for ::1 at 2021-06-27 13:37:28 -0400
+Processing by ExperiencesController#index as HTML
+  Rendering experiences/index.html.erb
+  [1m[36mExperience Load (0.1ms)[0m  [1m[34mSELECT "experiences".* FROM "experiences"[0m
+  Rendered experiences/index.html.erb (0.7ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/parks" for ::1 at 2021-06-27 13:37:50 -0400
+Processing by ParksController#index as HTML
+  Rendering parks/index.html.erb
+  [1m[36mPark Load (0.2ms)[0m  [1m[34mSELECT "parks".* FROM "parks"[0m
+  Rendered parks/index.html.erb (1.6ms)
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/parks" for ::1 at 2021-06-27 13:38:02 -0400
+Processing by ParksController#index as HTML
+  Rendering parks/index.html.erb
+  [1m[36mPark Load (0.4ms)[0m  [1m[34mSELECT "parks".* FROM "parks"[0m
+  Rendered parks/index.html.erb (3.1ms)
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/parks" for ::1 at 2021-06-27 13:38:16 -0400
+Processing by ParksController#index as HTML
+  Rendering parks/index.html.erb
+  [1m[36mPark Load (0.4ms)[0m  [1m[34mSELECT "parks".* FROM "parks"[0m
+  Rendered parks/index.html.erb (3.0ms)
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/parks" for ::1 at 2021-06-27 13:38:34 -0400
+Processing by ParksController#index as HTML
+  Rendering parks/index.html.erb
+  [1m[36mPark Load (0.1ms)[0m  [1m[34mSELECT "parks".* FROM "parks"[0m
+  Rendered parks/index.html.erb (1.3ms)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.1ms)
+
+
